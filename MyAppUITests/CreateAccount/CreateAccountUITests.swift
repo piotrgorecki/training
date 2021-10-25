@@ -10,7 +10,9 @@ import XCTest
 class CreateAccountUITests: XCTestCase {
   
   override class func setUp() {
+    //app.launchArguments = ["-clearLocalStorage", "asdasdasd"]
     app.launch()
+    
   }
   
   override func setUpWithError() throws {
@@ -47,9 +49,19 @@ class CreateAccountUITests: XCTestCase {
   }
   
   func testCreateAccountWithInvalidAllData() throws {
-    CreateAccount.enter(login: "aaaa")
-    CreateAccount.enter(password: "A")
-    CreateAccount.enter(confirm: "Aa!1a")
+    XCTContext.runActivity(named: "Enter invalid login") { _ in
+      CreateAccount.enter(login: "aaaa")
+    }
+    
+    XCTContext.runActivity(named: "Enter invalid password") { _ in
+      CreateAccount.enter(password: "A")
+    }
+    
+    XCTContext.runActivity(named: "Enter invalid confirm") { _ in
+      CreateAccount.enter(confirm: "Aa!1a")
+    }
+    
+    
     
     CreateAccountAssert.loginValidatorMessage(enabled: true)
     CreateAccountAssert.passwordValidatorMessage(enabled: true)
