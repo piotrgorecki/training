@@ -36,3 +36,27 @@ class CreateAccount {
     field.typeText(confirm)
   }
 }
+
+class CreateAccountAssert {
+  
+  class func loginValidatorMessage(enabled: Bool) {
+    let label = app.staticTexts[UserInterface.CreateAccount.loginValidatorMessage]
+      .waitForExistence(timeout: minTimeout)
+    
+    XCTAssertEqual(label, enabled, "loginValidatorMessage")
+  }
+  
+  class func passwordValidatorMessage(enabled: Bool) {
+    let label = app.staticTexts[UserInterface.CreateAccount.passwordValidatorMessage]
+      .waitForExistence(timeout: minTimeout)
+    
+    XCTAssertEqual(label, enabled, "passwordValidatorMessage")
+  }
+  
+  class func createAccountAction(enabled: Bool) {
+    let button = app.buttons[UserInterface.CreateAccount.createAccountButton]
+    
+    XCTAssertEqual(button.isEnabled, enabled, createAccountActionAccess)
+  }
+}
+

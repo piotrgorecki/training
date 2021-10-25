@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+let maxTimeout = 20.0
+let regularTimeout = 10.0
+let minTimeout = 5.0
