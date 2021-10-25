@@ -15,6 +15,8 @@ class CreateAccountUITests: XCTestCase {
   
   override func setUpWithError() throws {
     continueAfterFailure = false
+    
+    CreateAccount.resetForm()
   }
   
   override func tearDownWithError() throws {

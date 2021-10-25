@@ -20,20 +20,39 @@ class CreateAccount {
   
   class func enter(login: String) {
     let field = app.textFields[UserInterface.CreateAccount.loginTextField]
-    field.tap()
-    field.typeText(login)
+    if login.count > 0 {
+      field.tap()
+      field.typeText(login)
+    } else {
+      AssertMagicTool.clear(textField: field)
+    }
   }
   
   class func enter(password: String) {
     let field = app.secureTextFields[UserInterface.CreateAccount.passwordTextField]
-    field.tap()
-    field.typeText(password)
+    if password.count > 0 {
+      field.tap()
+      
+      field.typeText(password)
+    } else {
+      AssertMagicTool.clear(textField: field)
+    }
   }
   
   class func enter(confirm: String) {
     let field = app.secureTextFields[UserInterface.CreateAccount.confirmTextFiled]
-    field.tap()
-    field.typeText(confirm)
+    if confirm.count > 0 {
+      field.tap()
+      field.typeText(confirm)
+    } else {
+      AssertMagicTool.clear(textField: field)
+    }
+  }
+  
+  class func resetForm() {
+    enter(login: "")
+    enter(password: "")
+    enter(confirm: "")
   }
 }
 

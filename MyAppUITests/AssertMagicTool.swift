@@ -30,4 +30,15 @@ class AssertMagicTool {
   class func labelAbsent(label: String) {
     XCTAssertFalse(app.staticTexts[label].waitForExistence(timeout: minTimeout), "")
   }
+  
+  class func clear(textField: XCUIElement) {
+    textField.tap()
+    textField.press(forDuration: 1.0)
+    
+    if app.menuItems["Select All"].waitForExistence(timeout: 0.5) {
+      app.menuItems["Select All"].tap()
+    }
+    
+    app.keys["delete"].tap()
+  }
 }
