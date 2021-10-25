@@ -16,18 +16,23 @@ struct CreateAccountView<T>: View where T: CreateAccountViewModelProtocol {
   var body: some View {
     VStack(spacing: 24) {
         TextField("Login", text: self.$model.login)
+          .accessibility(identifier: UserInterface.CreateAccount.loginTextField)
           .textFieldStyle(RoundedBorderTextFieldStyle())
         if self.model.loginIsEditing {
           Text(self.model.loginValidatorMessage)
+            .accessibility(identifier: UserInterface.CreateAccount.loginValidatorMessage)
             .foregroundColor(.red)
         }
       
         SecureField("Password", text: self.$model.password)
+          .accessibility(identifier: UserInterface.CreateAccount.passwordTextField)
           .textFieldStyle(RoundedBorderTextFieldStyle())
         SecureField("Confirm password", text: self.$model.confirmPassword)
+          .accessibility(identifier: UserInterface.CreateAccount.confirmTextFiled)
           .textFieldStyle(RoundedBorderTextFieldStyle())
         if self.model.passwordIsEditing {
           Text(self.model.passwordValidatorMessage)
+            .accessibility(identifier: UserInterface.CreateAccount.passwordValidatorMessage)
             .foregroundColor(.red)
         }
       
@@ -38,6 +43,7 @@ struct CreateAccountView<T>: View where T: CreateAccountViewModelProtocol {
             .cornerRadius(10)
         }
       }
+      .accessibility(identifier: UserInterface.CreateAccount.createAccountButton)
       .disabled(!self.model.formIsValid)
     }
     .padding(.horizontal, 24)

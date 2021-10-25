@@ -12,9 +12,15 @@
 		E2484416271FCF1100203603 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2484415271FCF1100203603 /* CreateAccountView.swift */; };
 		E2484418271FCF1900203603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2484417271FCF1900203603 /* Assets.xcassets */; };
 		E248441B271FCF1900203603 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E248441A271FCF1900203603 /* Preview Assets.xcassets */; };
+		E26136A32726D284004FC5D3 /* AssertConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26136A22726D284004FC5D3 /* AssertConfig.swift */; };
+		E26136AB2726D2A3004FC5D3 /* AssertMagicTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26136AA2726D2A3004FC5D3 /* AssertMagicTool.swift */; };
 		E27ABCE2272454190057332A /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27ABCE1272454190057332A /* CreateAccountViewModel.swift */; };
 		E27ABCEA2724554A0057332A /* AccountValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27ABCE92724554A0057332A /* AccountValidator.swift */; };
-		E2B351C92726B60900010357 /* MyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B351C82726B60900010357 /* MyAppUITests.swift */; };
+		E2B351C92726B60900010357 /* CreateAccountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B351C82726B60900010357 /* CreateAccountUITests.swift */; };
+		E2B351D92726C94800010357 /* Automator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B351D82726C94800010357 /* Automator.swift */; };
+		E2B351E02726CAEB00010357 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B351DF2726CAEB00010357 /* CreateAccount.swift */; };
+		E2B351E62726CCE100010357 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B351E52726CCE100010357 /* UserInterface.swift */; };
+		E2B351E92726CFD800010357 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B351E52726CCE100010357 /* UserInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +41,17 @@
 		E2484417271FCF1900203603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E248441A271FCF1900203603 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E248441C271FCF1900203603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26136A22726D284004FC5D3 /* AssertConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertConfig.swift; sourceTree = "<group>"; };
+		E26136AA2726D2A3004FC5D3 /* AssertMagicTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertMagicTool.swift; sourceTree = "<group>"; };
 		E27ABCE1272454190057332A /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		E27ABCE92724554A0057332A /* AccountValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountValidator.swift; sourceTree = "<group>"; };
 		E2B351C62726B60900010357 /* MyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2B351C82726B60900010357 /* MyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppUITests.swift; sourceTree = "<group>"; };
+		E2B351C82726B60900010357 /* CreateAccountUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountUITests.swift; sourceTree = "<group>"; };
 		E2B351CA2726B60900010357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B351D22726B67F00010357 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		E2B351D82726C94800010357 /* Automator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automator.swift; sourceTree = "<group>"; };
+		E2B351DF2726CAEB00010357 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		E2B351E52726CCE100010357 /* UserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				E27ABCE0272453DC0057332A /* Account */,
+				E2B351E52726CCE100010357 /* UserInterface.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,11 +141,23 @@
 		E2B351C72726B60900010357 /* MyAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E2B351D82726C94800010357 /* Automator.swift */,
+				E26136A22726D284004FC5D3 /* AssertConfig.swift */,
+				E26136AA2726D2A3004FC5D3 /* AssertMagicTool.swift */,
+				E2B351DE2726CAB000010357 /* CreateAccount */,
 				E2B351D22726B67F00010357 /* TestPlan.xctestplan */,
-				E2B351C82726B60900010357 /* MyAppUITests.swift */,
 				E2B351CA2726B60900010357 /* Info.plist */,
 			);
 			path = MyAppUITests;
+			sourceTree = "<group>";
+		};
+		E2B351DE2726CAB000010357 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				E2B351C82726B60900010357 /* CreateAccountUITests.swift */,
+				E2B351DF2726CAEB00010357 /* CreateAccount.swift */,
+			);
+			path = CreateAccount;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +263,7 @@
 				E27ABCE2272454190057332A /* CreateAccountViewModel.swift in Sources */,
 				E27ABCEA2724554A0057332A /* AccountValidator.swift in Sources */,
 				E2484414271FCF1100203603 /* MyAppApp.swift in Sources */,
+				E2B351E62726CCE100010357 /* UserInterface.swift in Sources */,
 				E21A2381272442F600D0256C /* AccountManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,7 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2B351C92726B60900010357 /* MyAppUITests.swift in Sources */,
+				E2B351D92726C94800010357 /* Automator.swift in Sources */,
+				E26136A32726D284004FC5D3 /* AssertConfig.swift in Sources */,
+				E2B351E02726CAEB00010357 /* CreateAccount.swift in Sources */,
+				E2B351E92726CFD800010357 /* UserInterface.swift in Sources */,
+				E2B351C92726B60900010357 /* CreateAccountUITests.swift in Sources */,
+				E26136AB2726D2A3004FC5D3 /* AssertMagicTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
